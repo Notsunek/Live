@@ -9,5 +9,4 @@ public class LivescoreApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(LivescoreApplication.class, args);
 	}
-
 }
