@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -20,5 +21,10 @@ public class RegionResource {
     @GetMapping("/{id}")
     public Optional<Region> getRegion(@PathVariable int id) {
         return regionService.getRegion(id);
+    }
+
+    @GetMapping
+    public List<Region> getRegions() {
+        return regionService.getRegions();
     }
 }

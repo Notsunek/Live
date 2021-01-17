@@ -5,6 +5,7 @@ import com.kiwi.livescore.repository.RegionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -16,5 +17,9 @@ public class RegionService {
     public Optional<Region> getRegion(int id) {
         return regionRepository.findById(id);
 
+    }
+
+    public List<Region> getRegions() {
+        return regionRepository.findAll();
     }
 }
